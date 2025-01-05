@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Webpage</title>
+    <style>
+        /* Reset body and HTML */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Background image styling */
+        body {
+            background: url('image.png') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Text container */
+        .text-container {
+            color: white;
+            text-shadow: 2px 2px 5px black;
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Animation for text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add a subtle pulsating effect to text */
+        .text-container h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Optional footer styling */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content -->
+    <div class="text-container">
+        <h1>Silence Speaks Louder</h1>
+        <p>Background image with subtle animations</p>
+    </div>
+    <div class="footer">By John Mejorada</div>
+</body>
+</html>
